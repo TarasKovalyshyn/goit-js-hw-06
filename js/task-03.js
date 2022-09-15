@@ -14,26 +14,9 @@ const images = [
 ];
 
 const gallaryRef = document.querySelector(".gallery");
-// gallaryRef.classList.add("js__gallary__style");
 
 const listItemsRef = images.map(({ url, alt }) => {
-  const itemRef = document.createElement("li");
-  // itemRef.classList.add("gallery__item");
-  const linkRef = document.createElement("a");
-  linkRef.href = "#";
-  const imgRef = document.createElement("img");
-  imgRef.src = url;
-  imgRef.alt = alt;
-  itemRef.style.cssText = 
-  `display: flex;
-  flex-direction = column;
-  list-style: none;  
-  margin-bottom: 20px;
-  `;
-  itemRef.append(linkRef);
-  linkRef.append(imgRef);
-
-  return itemRef;
+  return `<li class = "gallery-item" list-style='none'> <img src = "${url}"alt = "${alt}" width = "500"height = "300"display= 'flex'/></li>`;
 });
 
-gallaryRef.append(...listItemsRef);
+gallaryRef.insertAdjacentHTML("beforeend", listItemsRef);

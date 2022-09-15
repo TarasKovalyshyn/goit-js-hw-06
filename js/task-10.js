@@ -16,7 +16,7 @@ let newArray = [];
 const basicSize = 30;
 
 function createBoxes(amount) {
-  for (let i = 0; i < amount; i+=1) {
+  for (let i = 0; i < amount; i += 1) {
     const size = basicSize + i * 10;
     const item = document.createElement("div");
     item.style.cssText = `width: ${size}px; height: ${size}px; background-color: ${getRandomHexColor()}; margin-bottom: 10px;`;
