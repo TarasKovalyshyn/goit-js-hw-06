@@ -3,8 +3,10 @@ const spanRef = document.querySelector(".color");
 const bodyRef = document.querySelector("body");
 
 function hendlerColor() {
+  const randomColor = getRandomHexColor();
   console.log(
-    (bodyRef.style.background = spanRef.textContent = `${getRandomHexColor()}`)
+    ((bodyRef.style.background = randomColor),
+    (spanRef.textContent = randomColor))
   );
 }
 

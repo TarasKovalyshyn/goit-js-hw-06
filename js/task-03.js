@@ -19,4 +19,4 @@ const listItemsRef = images.map(({ url, alt }) => {
   return `<li class = "gallery-item" list-style='none'> <img src = "${url}"alt = "${alt}" width = "500"height = "300"display= 'flex'/></li>`;
 });
 
-gallaryRef.insertAdjacentHTML("beforeend", listItemsRef);
+gallaryRef.insertAdjacentHTML("beforeend", listItemsRef.join(""));
